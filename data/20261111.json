@@ -20,70 +20,41 @@
     "epigrafe": "La Chiesa ha sete del suo Salvatore, bramando di dissetarsi alla fonte dell’acqua viva che zampilla per la vita eterna (cfr. Cassiodoro).",
     "strofe": [
       [
-        "O Dio, tu sei il mio Dio, all’aurora ti cerco, *"
-      ],
-      [
-        "  di te ha sete l’anima mia,"
-      ],
-      [
-        "a te anela la mia carne, *"
-      ],
-      [
+        "O Dio, tu sei il mio Dio, all’aurora ti cerco, *",
+        "  di te ha sete l’anima mia,",
+        "a te anela la mia carne, *",
         "  come terra deserta, arida, senz’acqua."
       ],
       [
-        "Così nel santuario ti ho cercato, *"
-      ],
-      [
-        "  per contemplare la tua potenza e la tua gloria."
-      ],
-      [
-        "Poiché la tua grazia vale più della vita, *"
-      ],
-      [
+        "Così nel santuario ti ho cercato, *",
+        "  per contemplare la tua potenza e la tua gloria.",
+        "Poiché la tua grazia vale più della vita, *",
         "  le mie labbra diranno la tua lode."
       ],
       [
-        "Così ti benedirò finché io viva, *"
-      ],
-      [
-        "  nel tuo nome alzerò le mie mani."
-      ],
-      [
-        "Mi sazierò come a lauto convito, *"
-      ],
-      [
+        "Così ti benedirò finché io viva, *",
+        "  nel tuo nome alzerò le mie mani.",
+        "Mi sazierò come a lauto convito, *",
         "  e con voci di gioia ti loderà la mia bocca."
       ],
       [
-        "Nel mio giaciglio di te mi ricordo, *"
-      ],
-      [
-        "  penso a te nelle veglie notturne,"
-      ],
-      [
-        "tu sei stato il mio aiuto; *"
-      ],
-      [
+        "Nel mio giaciglio di te mi ricordo, *",
+        "  penso a te nelle veglie notturne,",
+        "tu sei stato il mio aiuto; *",
         "  esulto di gioia all’ombra delle tue ali."
       ],
       [
-        "A te si stringe *"
-      ],
-      [
-        "  l’anima mia."
-      ],
-      [
-        "La forza della tua destra *"
-      ],
-      [
+        "A te si stringe *",
+        "  l’anima mia.",
+        "La forza della tua destra *",
         "  mi sostiene."
       ]
     ]
   },
+  "bloccato": false,
   "fonti": {
     "lodi": "https://www.chiesacattolica.it/la-liturgia-delle-ore/?data-liturgia=20261111&ora=lodi-mattutine",
     "messa": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261111"
   },
-  "aggiornato": "2026-11-05T22:16:24.380Z"
+  "aggiornato": "2026-11-05T22:21:38.910Z"
 }

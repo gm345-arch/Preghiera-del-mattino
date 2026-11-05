@@ -19,82 +19,51 @@
     "epigrafe": "Se mi amate osservate i miei comandamenti (Gv 14, 15).",
     "strofe": [
       [
-        "Amore e giustizia voglio cantare, *"
-      ],
-      [
-        "  voglio cantare inni a te, o Signore."
-      ],
-      [
-        "Agirò con saggezza nella via dell’innocenza: *"
-      ],
-      [
+        "Amore e giustizia voglio cantare, *",
+        "  voglio cantare inni a te, o Signore.",
+        "Agirò con saggezza nella via dell’innocenza: *",
         "  quando a me verrai?"
       ],
       [
-        "Camminerò con cuore integro, *"
-      ],
-      [
+        "Camminerò con cuore integro, *",
         "  dentro la mia casa."
       ],
       [
-        "Non sopporterò davanti ai miei occhi azioni malvagie; †"
-      ],
-      [
-        "  detesto chi fa il male, *"
-      ],
-      [
+        "Non sopporterò davanti ai miei occhi azioni malvagie; †",
+        "  detesto chi fa il male, *",
         "  non mi sarà vicino."
       ],
       [
-        "Lontano da me il cuore perverso, *"
-      ],
-      [
+        "Lontano da me il cuore perverso, *",
         "  il malvagio non lo voglio conoscere."
       ],
       [
-        "Chi calunnia in segreto il suo prossimo *"
-      ],
-      [
-        "  io lo farò perire;"
-      ],
-      [
-        "chi ha occhi altezzosi e cuore superbo *"
-      ],
-      [
+        "Chi calunnia in segreto il suo prossimo *",
+        "  io lo farò perire;",
+        "chi ha occhi altezzosi e cuore superbo *",
         "  non lo potrò sopportare."
       ],
       [
-        "I miei occhi sono rivolti ai fedeli del paese †"
-      ],
-      [
-        "  perché restino a me vicino: *"
-      ],
-      [
+        "I miei occhi sono rivolti ai fedeli del paese †",
+        "  perché restino a me vicino: *",
         "  chi cammina per la via integra sarà mio servitore."
       ],
       [
-        "Non abiterà nella mia casa"
-      ],
-      [
-        "  chi agisce con inganno, *"
-      ],
-      [
+        "Non abiterà nella mia casa",
+        "  chi agisce con inganno, *",
         "  chi dice menzogne non starà alla mia presenza."
       ],
       [
-        "Sterminerò ogni mattino tutti gli empi del paese, *"
-      ],
-      [
-        "  per estirpare dalla città del Signore"
-      ],
-      [
+        "Sterminerò ogni mattino tutti gli empi del paese, *",
+        "  per estirpare dalla città del Signore",
         "  quanti operano il male."
       ]
     ]
   },
+  "bloccato": false,
   "fonti": {
     "lodi": "https://www.chiesacattolica.it/la-liturgia-delle-ore/?data-liturgia=20261110&ora=lodi-mattutine",
     "messa": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261110"
   },
-  "aggiornato": "2026-11-05T22:16:19.870Z"
+  "aggiornato": "2026-11-05T22:21:34.184Z"
 }
