@@ -106,13 +106,16 @@ export function estraiLodi(html) {
     titoloSalmo = rr[i].trim(); i = prossimaPiena(rr, i + 1);
   }
 
-  // epigrafe facoltativa: le righe prima del primo versetto (che ha sempre * o †),
-  // se finiscono con una citazione tra parentesi: "(2 Cor 1, 3. 4)." oppure "(cfr. Cassiodoro)."
+  // epigrafe facoltativa: le righe prima dei versetti che finiscono con una citazione
+  // tra parentesi, es. "(2 Cor 1, 3. 4)." oppure "(cfr. Cassiodoro)."
   let epigrafe = "";
   const primo = rr.findIndex((r, k) => k >= i && /[*†]/.test(r));
-  if (primo > i && primo - i <= 8) {
-    const pre = rr.slice(i, primo).filter((r) => !vuota(r)).map((r) => r.trim());
-    if (pre.length && /\)\.?$/.test(pre[pre.length - 1])) { epigrafe = pre.join(" ").replace(/\s+(\()/, " $1"); i = primo; }
+  for (let k = i; k < Math.min(primo < 0 ? rr.length : primo, i + 10); k++) {
+    if (/\)\.?\s*$/.test(rr[k])) {
+      epigrafe = rr.slice(i, k + 1).filter((r) => !vuota(r)).map((r) => r.trim()).join(" ").replace(/\s+(\()/, " $1");
+      i = k + 1;
+      break;
+    }
   }
 
   // corpo del salmo fino al Gloria o alla ripetizione dell'antifona
@@ -203,6 +206,8 @@ export function controlla(lodi, messa) {
     p.push("l'antifona ripetuta dopo il salmo è diversa da quella iniziale");
   if (!tutte.some((r) => r.includes("*"))) p.push("il salmo non ha i versetti con l'asterisco");
   if (tutte.length < 4) p.push("salmo troppo corto");
+  if (tutte.some((r) => /\((cfr\.|[1-3]?\s?[A-Z][a-z]{1,3}\s*\d)[^)]*\)\.?\s*$/.test(r.trim())))
+    p.push("nel salmo è finita la citazione introduttiva");
   if (tutte.some((r) => /^(\d\s*ant\.|SALMO|CANTICO|LETTURA BREVE|Gloria al Padre)/i.test(r.trim())))
     p.push("nel salmo c'è testo di altre parti");
   const v = messa.vangelo, testo = v.paragrafi.join(" ");
