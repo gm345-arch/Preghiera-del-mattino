@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Preghiera del mattino</title>
+<meta name="theme-color" content="#f6f1e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1b1814" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+SC:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --carta:#f6f1e7; --inchiostro:#2a241d; --tenue:#6f655a; --rubrica:#a8261d;
+  --filetto:#d9cdb7; --pannello:#efe7d7; --fs:20px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --carta:#1b1814; --inchiostro:#ece4d6; --tenue:#a99d8c; --rubrica:#e0705f;
+    --filetto:#3a332a; --pannello:#24201b;
+  }
+}
+:root[data-theme="dark"]{
+  --carta:#1b1814; --inchiostro:#ece4d6; --tenue:#a99d8c; --rubrica:#e0705f;
+  --filetto:#3a332a; --pannello:#24201b;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--carta); color:var(--inchiostro);
+  font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+  font-size:var(--fs); line-height:1.55;
+}
+main{max-width:40rem; margin:0 auto; padding:0 16px 5rem}
+
+/* barra superiore */
+.barra{
+  position:sticky; top:0; z-index:5; background:var(--carta);
+  border-bottom:1px solid var(--filetto);
+  padding:calc(env(safe-area-inset-top) + 8px) 16px 8px;
+}
+.barra-in{max-width:40rem; margin:0 auto; display:flex; align-items:center; gap:8px}
+.barra button{
+  font:inherit; font-size:16px; color:var(--inchiostro); background:none;
+  border:1px solid var(--filetto); border-radius:999px; min-width:40px; height:40px;
+  padding:0 12px; cursor:pointer;
+}
+.barra button:active{background:var(--pannello)}
+.barra .data{flex:1; text-align:center; font-size:16px; line-height:1.2}
+.barra .data b{display:block; font-family:"Cormorant SC",serif; font-size:19px; letter-spacing:.04em; font-weight:600}
+.barra .data span{color:var(--tenue); font-size:14px}
+
+/* intestazione */
+header.titolo{text-align:center; padding:2.2rem 0 1.4rem}
+header.titolo h1{
+  font-family:"Cormorant SC",serif; font-weight:600; font-size:1.7em; letter-spacing:.05em;
+  margin:0; line-height:1.1;
+}
+header.titolo p{margin:.5rem 0 0; color:var(--rubrica); font-size:.85em; letter-spacing:.03em}
+
+section{padding:1.2rem 0; border-top:1px solid var(--filetto)}
+section:first-of-type{border-top:0}
+
+.rubrica{color:var(--rubrica); font-style:italic; font-size:.82em; line-height:1.45; margin:0 0 .8rem}
+.etichetta{color:var(--rubrica); font-style:italic; margin-right:.35em}
+.versi p{margin:0}
+.versi{margin:0 0 1rem}
+.strofa{margin:0 0 .9rem}
+.strofa p{margin:0; padding-left:1.4em; text-indent:-1.4em}
+.strofa p.rientro{padding-left:2.6em}
+.salmo-tit{font-family:"Cormorant SC",serif; font-weight:600; letter-spacing:.04em; font-size:1.05em; margin:.4rem 0 0}
+.salmo-sotto{font-style:italic; margin:0}
+.epigrafe{color:var(--tenue); font-size:.85em; font-style:italic; margin:.3rem 0 1.1rem}
+.croce{color:var(--rubrica); font-style:normal}
+.ant{margin:0 0 1rem}
+.ant .t p{margin:0}
+.vangelo p{margin:0 0 .8rem; white-space:pre-line; text-wrap:pretty}
+.annuncio{font-weight:500; margin:0 0 .9rem}
+.autore{text-align:right; color:var(--tenue); font-style:italic; margin:.4rem 0 0; font-size:.9em}
+.oppure{color:var(--tenue); font-size:.85em; margin:.2rem 0 .2rem}
+.tutti{font-weight:500}
+.vuoto{color:var(--tenue); font-style:italic}
+
+.avviso{
+  background:var(--pannello); border:1px solid var(--filetto); border-radius:14px;
+  padding:1.1rem 1.2rem; margin:2rem 0; font-size:.9em;
+}
+.avviso h2{font-family:"Cormorant SC",serif; font-weight:600; margin:0 0 .4rem; font-size:1.2em}
+.avviso a, footer a{color:var(--rubrica)}
+footer{color:var(--tenue); font-size:13px; text-align:center; padding:2rem 0 1rem; line-height:1.5}
+
+@media print{
+  .barra,footer{display:none}
+  body{background:#fff; color:#000}
+}
+</style>
+</head>
+<body>
+<div class="barra"><div class="barra-in">
+  <button id="prec" aria-label="Giorno precedente">‹</button>
+  <div class="data"><b id="giorno">…</b><span id="dataLunga"></span></div>
+  <button id="succ" aria-label="Giorno successivo">›</button>
+  <button id="testo" aria-label="Dimensione del testo">A</button>
+</div></div>
+
+<main id="app" aria-live="polite"></main>
+
+<footer>
+  Testi liturgici: <a id="fonteLodi" href="#" target="_blank" rel="noopener">Liturgia delle Ore</a> ·
+  <a id="fonteMessa" href="#" target="_blank" rel="noopener">Messa del giorno</a> — © CEI, chiesacattolica.it
+</footer>
+
+<script>
+const PADRE_NOSTRO = "Padre nostro, che sei nei cieli,\nsia santificato il tuo nome,\nvenga il tuo regno,\nsia fatta la tua volontà,\ncome in cielo così in terra.\nDacci oggi il nostro pane quotidiano,\ne rimetti a noi i nostri debiti\ncome anche noi li rimettiamo ai nostri debitori,\ne non abbandonarci alla tentazione,\nma liberaci dal male.\nAmen.";
+const GIORNI = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
+const MESI = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+
+// ---------- date (sempre ora italiana) ----------
+function oggiRoma(){
+  const p = new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Rome",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+  const g = Object.fromEntries(p.map(x=>[x.type,x.value]));
+  return `${g.year}${g.month}${g.day}`;
+}
+const aData = s => new Date(Date.UTC(+s.slice(0,4), +s.slice(4,6)-1, +s.slice(6,8)));
+const aStringa = d => d.toISOString().slice(0,10).replace(/-/g,"");
+const sposta = (s,n) => { const d=aData(s); d.setUTCDate(d.getUTCDate()+n); return aStringa(d); };
+function feriale(s, verso){ // salta sabato e domenica
+  let x = sposta(s, verso);
+  while ([0,6].includes(aData(x).getUTCDay())) x = sposta(x, verso);
+  return x;
+}
+
+// ---------- preferenze ----------
+const store = {
+  get(k){ try{ return localStorage.getItem(k); }catch{ return null; } },
+  set(k,v){ try{ localStorage.setItem(k,v); }catch{} }
+};
+const TAGLIE = [18,20,23,27,32];
+let taglia = Math.min(+store.get("taglia") || 1, TAGLIE.length-1);
+const applicaTaglia = () => document.documentElement.style.setProperty("--fs", TAGLIE[taglia]+"px");
+applicaTaglia();
+document.getElementById("testo").onclick = () => { taglia=(taglia+1)%TAGLIE.length; store.set("taglia",taglia); applicaTaglia(); };
+
+// ---------- utilità di rendering ----------
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const segni = s => esc(s).replace(/([*†])/g,'<span class="croce">$1</span>');
+const righe = arr => arr.map(r => `<p>${esc(r)}</p>`).join("");
+const daTesto = t => t.split(/\n{2,}/).map(s => `<div class="strofa">${s.split("\n").map(r=>`<p>${esc(r)}</p>`).join("")}</div>`).join("");
+const rubrica = t => `<p class="rubrica">${t}</p>`;
+const GLORIA = `<div class="versi tutti">${righe(["Gloria al Padre e al Figlio","e allo Spirito Santo,","come era nel principio e ora e sempre","nei secoli dei secoli. Amen"])}</div>`;
+
+function preghieraDelGiorno(s, P){
+  const g = aData(s).getUTCDay(); // 1..5
+  if (g >= 1 && g <= 4) return P.preghiere[g-1];
+  const inizio = aData(P.venerdi_inizio.replace(/-/g,""));
+  const settimane = Math.round((aData(s) - inizio) / (7*86400000));
+  return P.preghiere[4 + (((settimane % 3) + 3) % 3)];
+}
+
+// ---------- pagina ----------
+async function carica(s){
+  history.replaceState(null, "", s === oggiRoma() ? location.pathname : `?data=${s}`);
+  const d = aData(s), g = d.getUTCDay();
+  document.getElementById("giorno").textContent = (s === oggiRoma() ? "Oggi · " : "") + GIORNI[g];
+  document.getElementById("dataLunga").textContent = `${d.getUTCDate()} ${MESI[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+  const urlLodi = `https://www.chiesacattolica.it/la-liturgia-delle-ore/?data-liturgia=${s}&ora=lodi-mattutine`;
+  const urlMessa = `https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=${s}`;
+  document.getElementById("fonteLodi").href = urlLodi;
+  document.getElementById("fonteMessa").href = urlMessa;
+  const app = document.getElementById("app");
+  window.scrollTo(0,0);
+
+  if (g === 0 || g === 6){
+    app.innerHTML = `<div class="avviso"><h2>${GIORNI[g]}</h2>
+      Il sabato e la domenica la preghiera del mattino non si fa.
+      <p><a href="?data=${feriale(s,1)}" data-vai="${feriale(s,1)}">Vai a lunedì →</a></p></div>`;
+    return;
+  }
+  app.innerHTML = `<p class="vuoto" style="text-align:center;padding:3rem 0">Caricamento…</p>`;
+
+  let L = null, P;
+  try{ P = await (await fetch("preghiere.json",{cache:"no-cache"})).json(); }
+  catch{ P = {preghiere:[], venerdi_inizio:"2026-11-06"}; }
+  try{
+    const r = await fetch(`data/${s}.json`,{cache:"no-cache"});
+    if (r.ok) L = await r.json();
+  }catch{}
+
+  const pr = preghieraDelGiorno(s, P) || {testo:"", autore:""};
+
+  let lodiHTML, vangeloHTML;
+  if (L){
+    const sa = L.salmo;
+    const ant = `<div class="ant"><span class="etichetta">1 ant.</span><span class="t">${L.antifona.map((r,i)=> i? `<p>${esc(r)}</p>` : esc(r)).join("")}</span></div>`;
+    lodiHTML = `${ant}
+      <p class="salmo-tit">${esc(sa.numero)}</p>
+      ${sa.titolo ? `<p class="salmo-sotto">${esc(sa.titolo)}</p>` : ""}
+      ${sa.epigrafe ? `<p class="epigrafe">${esc(sa.epigrafe)}</p>` : `<div style="height:.9rem"></div>`}
+      ${sa.strofe.map(st => `<div class="strofa">${st.map(r => `<p class="${/^\s/.test(r)?"rientro":""}">${segni(r.trim())}</p>`).join("")}</div>`).join("")}
+      ${rubrica("Al termine del salmo si recita insieme «Gloria al Padre e al Figlio…», quindi si ripete insieme l’antifona.")}
+      ${GLORIA}${ant}`;
+    const v = L.vangelo;
+    vangeloHTML = `<p class="annuncio">Ascoltiamo la parola del Signore dal Vangelo secondo ${esc(v.evangelista)}${v.riferimento ? ` <span class="oppure">(${esc(v.riferimento)})</span>` : ""}</p>
+      <div class="vangelo">${v.paragrafi.map(p=>`<p>${esc(p)}</p>`).join("")}</div>`;
+  } else {
+    const msg = `<p class="vuoto">I testi di questo giorno non sono ancora stati scaricati. Puoi leggerli direttamente da <a href="URL" target="_blank" rel="noopener">chiesacattolica.it</a>.</p>`;
+    lodiHTML = msg.replace("URL", urlLodi);
+    vangeloHTML = msg.replace("URL", urlMessa);
+  }
+
+  const titoloCel = L && L.celebrazione ? `<p>${esc(L.celebrazione)}</p>` : "";
+  app.innerHTML = `
+  <header class="titolo"><h1>Preghiera del mattino</h1>${titoloCel}</header>
+
+  <section>
+    ${rubrica("Facendosi un segno di croce sulle labbra si dice insieme:")}
+    <div class="versi tutti">${righe(["Signore apri le mie labbra","e la mia bocca proclami la tua lode.","Dio fa attento il mio orecchio","perché ascolti la tua parola."])}</div>
+    ${GLORIA}
+  </section>
+
+  <section>
+    ${rubrica("Ci si siede. Un lettore proclama l’antifona e poi si prega insieme il primo salmo delle lodi mattutine del giorno.")}
+    ${lodiHTML}
+  </section>
+
+  <section>
+    ${rubrica("Si proclama dall’ambone il Vangelo previsto dalla liturgia del giorno; in assenza di un ministro ordinato il Vangelo viene introdotto dal lettore con le seguenti parole:")}
+    ${vangeloHTML}
+    ${rubrica("Non si conclude con «Parola del Signore».<br>Al termine della lettura si fa una breve sosta di silenzio.")}
+  </section>
+
+  <section>
+    ${rubrica("Se lo si desidera si può lasciare un breve momento per le intenzioni personali. Insieme si recita la preghiera del mattino.")}
+    <div class="tutti">${daTesto(pr.testo)}</div>
+    ${pr.autore ? `<p class="autore">${esc(pr.autore)}</p>` : ""}
+  </section>
+
+  <section>
+    ${rubrica("Quindi chi guida la preghiera introduce il Padre Nostro dicendo:")}
+    <p>«E ora preghiamo insieme con la preghiera del Signore»</p>
+    <p class="oppure">oppure «Concludiamo la nostra preghiera del mattino chiedendo l’avvento del Regno dei Cieli»</p>
+    <p class="oppure" style="margin-bottom:1rem">oppure «Ricordati di noi, Signore Gesù, presso il Padre tuo e ammettici a pregare con le tue parole»</p>
+    <div class="tutti">${daTesto(PADRE_NOSTRO)}</div>
+  </section>
+
+  <section>
+    ${rubrica("Si conclude la preghiera con la seguente formula recitata da chi presiede, mentre tutti fanno il segno di croce:")}
+    <p>«Il Signore ci benedica, ci preservi da ogni male e ci conduca alla vita eterna»</p>
+    <p class="tutti">Amen.</p>
+  </section>`;
+}
+
+let corrente = new URLSearchParams(location.search).get("data");
+if (!/^\d{8}$/.test(corrente || "")) corrente = oggiRoma();
+const vai = s => { corrente = s; carica(s); };
+document.getElementById("prec").onclick = () => vai(feriale(corrente,-1));
+document.getElementById("succ").onclick = () => vai(feriale(corrente,1));
+document.addEventListener("click", e => { const a = e.target.closest("[data-vai]"); if (a){ e.preventDefault(); vai(a.dataset.vai); } });
+carica(corrente);
+</script>
+</body>
+</html>

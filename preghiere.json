@@ -1,0 +1,41 @@
+{
+  "_istruzioni": "1 = lunedì, 2 = martedì, 3 = mercoledì, 4 = giovedì. Il venerdì si alternano a turno la 5, la 6 e la 7 (a partire da venerdi_inizio). Una riga vuota (\\n\\n) separa le strofe.",
+  "venerdi_inizio": "2026-11-06",
+  "preghiere": [
+    {
+      "n": 1,
+      "autore": "Preghiera del VII secolo",
+      "testo": "Signore, resta con me in questo giorno\ne anima le mie azioni,\nle mie parole e i miei pensieri.\nCustodisci i miei piedi\nperché non passeggino oziosi,\nma mi portino incontro\nalle necessità degli altri.\nCustodisci le mie mani\nperché non si allunghino per fare il male\nma sempre per abbracciare e aiutare.\nCustodisci la mia bocca\nperché non dica cose false e vane\ne non parli male del prossimo,\nma sempre sia pronta\nad incoraggiare tutti\ne benedire te, Signore della vita.\nCustodisci il mio udito\nperché non perda tempo\nad ascoltare parole vuote e falsità,\nma sia sempre pronto ad accogliere\nil tuo misterioso messaggio\nper compiere, anche oggi, la tua\nvolontà.\nAmen"
+    },
+    {
+      "n": 2,
+      "autore": "Macario l’egiziano",
+      "testo": "Signore, amico degli uomini,\na te ricorro al mio risveglio\ncominciando il compito\nassegnatomi nella tua misericordia:\nassistimi in ogni tempo e in ogni cosa;\npreservami da ogni seduzione\nmondana;\nda ogni influenza del demonio;\nsalvami e introducimi\nnel tuo regno eterno.\n\nTu sei infatti il mio creatore,\nla fonte ed il dispensatore di ogni bene:\nin te riposa tutta la mia speranza,\ned io ti rendo gloria\nora e sempre\ne nei secoli dei secoli.\nAmen."
+    },
+    {
+      "n": 3,
+      "autore": "Giacomo di Sarug",
+      "testo": "Soffia su di me, Signore, lo Spirito di vita\nper ispirare le mie parole:\nfa' che io possa dire quel che dirò\nper l'utilità di tutti.\n\nLa tua parola, Figlio di Dio,\nè piena di vita\ne, anche se proclamata dai semplici,\nessa è luce.\n\nNon sarà raffinata, né dotta, né bella,\nma fa' che sempre sia utile a chi\nl'ascolta.\nTu, Signore, sei la nostra vera utilità;\nti prego, Figlio di Dio,\nconcedimi oggi di essere utile\na colui che mi ascolterà.\nAmen."
+    },
+    {
+      "n": 4,
+      "autore": "Efrem il Siro",
+      "testo": "Signore della mia vita,\nliberami dallo spirito dell'ozio\ndella tristezza,\ndel dominio\ne dalle parole vane.\n\nMa lo spirito\ndi carità, umiltà, pazienza\ne la carità che non viene mai meno\ndonali al tuo servitore.\n\nSì, mio Signore e mio Re,\nconcedimi di vedere i miei peccati\ne di non giudicare il fratello\nperché tu sei benedetto\nnei secoli dei secoli.\nAmen."
+    },
+    {
+      "n": 5,
+      "autore": "Tommaso d’Aquino",
+      "testo": "Accordami la tua sapienza\nvieni, o Spirito Santo, dentro di me,\nnel mio cuore e nella mia mente.\n\nAccordami la tua intelligenza,\nperché io possa conoscere il Padre\nnel meditare la parola del Vangelo.\n\nAccordami il tuo amore,\nperché anche quest'oggi,\nesortato dalla tua parola,\nti cerchi nei fatti e nelle persone\nche ho incontrato.\n\nAccordami la tua sapienza,\nperché io sappia rivivere e giudicare,\nalla luce della tua parola\nquello che oggi ho vissuto.\n\nAccordami la perseveranza,\nperché io con pazienza\npenetri il messaggio di Dio nel Vangelo.\nAmen."
+    },
+    {
+      "n": 6,
+      "autore": "Jean Guitton",
+      "testo": "Spirito Santo,\npresenza della Chiesa,\nche mi attraversi\nda parte a parte,\ne tu, mia ispirazione,\nmio fuoco interiore,\nmio refrigerio,\nmio respiro.\n\nTu che sei dolce\ncome una sorgente,\ne bruci come il fuoco.\n\nO unione di tutti i contrari,\nradunaci,\nfa' l'unità\nin noi e attorno a noi.\nAmen."
+    },
+    {
+      "n": 7,
+      "autore": "Origene",
+      "testo": "Preghiamo il Signore di concederci\nun'intelligenza più acuta delle profezie\ne di aprire maggiormente i nostri sensi\nalla verità;\n\nallora, considerando nello Spirito\nciò che a opera dello Spirito è stato\nscritto\ne misurando in modo spirituale\nle realtà spirituali, potremo:\n\nspiegare le Scritture\nsecondo lo Spirito Santo che le ha\nispirate,\nin Cristo nostro Signore,\nal quale è la gloria e\nla potenza nei secoli.\nAmen."
+    }
+  ]
+}
