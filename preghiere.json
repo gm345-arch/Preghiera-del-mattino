@@ -1,6 +1,6 @@
 {
   "_istruzioni": "1 = lunedì, 2 = martedì, 3 = mercoledì, 4 = giovedì. Il venerdì si alternano a turno la 5, la 6 e la 7 (a partire da venerdi_inizio). Una riga vuota (\\n\\n) separa le strofe.",
-  "venerdi_inizio": "2026-11-06",
+  "venerdi_inizio": "2026-10-30",
   "preghiere": [
     {
       "n": 1,
