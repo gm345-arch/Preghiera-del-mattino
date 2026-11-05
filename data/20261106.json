@@ -16,15 +16,8 @@
   "salmo": {
     "numero": "SALMO 50",
     "titolo": "Pietà di me, o Signore",
-    "epigrafe": "",
+    "epigrafe": "Rinnovatevi nello spirito della vostra mente e rivestite l’uomo nuovo (cfr. Ef 4, 23-24).",
     "strofe": [
-      [
-        "Rinnovatevi nello spirito della vostra mente e rivestite",
-        "l’uomo nuovo"
-      ],
-      [
-        "(cfr. Ef 4, 23-24)."
-      ],
       [
         "Pietà di me, o Dio,",
         "  secondo la tua misericordia; *",
@@ -104,5 +97,5 @@
     "lodi": "https://www.chiesacattolica.it/la-liturgia-delle-ore/?data-liturgia=20261106&ora=lodi-mattutine",
     "messa": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261106"
   },
-  "aggiornato": "2026-11-05T22:21:25.451Z"
+  "aggiornato": "2026-11-05T22:31:06.858Z"
 }
