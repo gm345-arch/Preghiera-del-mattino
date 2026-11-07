@@ -7,6 +7,12 @@
 <meta name="theme-color" content="#f6f1e7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1b1814" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Preghiera">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+SC:wght@500;600&display=swap" rel="stylesheet">
@@ -258,6 +264,34 @@ document.getElementById("prec").onclick = () => vai(feriale(corrente,-1));
 document.getElementById("succ").onclick = () => vai(feriale(corrente,1));
 document.addEventListener("click", e => { const a = e.target.closest("[data-vai]"); if (a){ e.preventDefault(); vai(a.dataset.vai); } });
 carica(corrente);
+
+// ---------- web app ----------
+// Se l'app resta aperta da ieri ed era su "oggi", quando la riapri passa al nuovo giorno
+let oggiAllApertura = oggiRoma();
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState !== "visible") return;
+  const oggi = oggiRoma();
+  if (oggi !== oggiAllApertura) {
+    if (corrente === oggiAllApertura) vai(oggi);
+    oggiAllApertura = oggi;
+  }
+});
+// Funzionamento senza connessione: salva sul telefono i testi dei prossimi giorni feriali
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    const controllato = () => navigator.serviceWorker.controller ? Promise.resolve() : new Promise(ok => {
+      navigator.serviceWorker.addEventListener("controllerchange", ok, { once: true });
+      setTimeout(ok, 5000);
+    });
+    navigator.serviceWorker.register("sw.js").then(() => navigator.serviceWorker.ready).then(controllato).then(() => {
+      let d = oggiRoma();
+      const giorni = [d];
+      while (giorni.length < 6) { d = feriale(d, 1); giorni.push(d); }
+      giorni.forEach(g => fetch(`data/${g}.json`).catch(() => {}));
+      fetch("preghiere.json").catch(() => {});
+    }).catch(() => {});
+  });
+}
 </script>
 </body>
 </html>
