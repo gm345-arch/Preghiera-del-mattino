@@ -1,0 +1,55 @@
+{
+  "data": "20261124",
+  "celebrazione": "SANTI ANDREA DUNG-LAC, PRESBITERO, E COMPAGNI, MARTIRI – MEMORIA",
+  "vangelo": {
+    "evangelista": "Luca",
+    "riferimento": "Lc 21,5-11",
+    "titolo": "Non sarà lasciata pietra su pietra.",
+    "paragrafi": [
+      "In quel tempo, mentre alcuni parlavano del tempio, che era ornato di belle pietre e di doni votivi, Gesù disse: «Verranno giorni nei quali, di quello che vedete, non sarà lasciata pietra su pietra che non sarà distrutta».\nGli domandarono: «Maestro, quando dunque accadranno queste cose e quale sarà il segno, quando esse staranno per accadere?». Rispose: «Badate di non lasciarvi ingannare. Molti infatti verranno nel mio nome dicendo: “Sono io”, e: “Il tempo è vicino”. Non andate dietro a loro! Quando sentirete di guerre e di rivoluzioni, non vi terrorizzate, perché prima devono avvenire queste cose, ma non è subito la fine».\nPoi diceva loro: «Si solleverà nazione contro nazione e regno contro regno, e vi saranno in diversi luoghi terremoti, carestie e pestilenze; vi saranno anche fatti terrificanti e segni grandiosi dal cielo»."
+    ]
+  },
+  "antifona": [
+    "Manda la tua verità e la tua luce:",
+    "mi guidino al tuo monte santo."
+  ],
+  "salmo": {
+    "numero": "SALMO 42 Desiderio del tempio di Dio",
+    "titolo": "Io come luce sono venuto nel mondo",
+    "epigrafe": "(Gv 12, 46).",
+    "strofe": [
+      [
+        "Fammi giustizia, o Dio, †",
+        "  difendi la mia causa contro gente spietata; *",
+        "  liberami dall’uomo iniquo e fallace."
+      ],
+      [
+        "Tu sei il Dio della mia difesa; †",
+        "  perché mi respingi, *",
+        "  perché triste me ne vado, oppresso dal nemico?"
+      ],
+      [
+        "Manda la tua verità e la tua luce; †",
+        "  siano esse a guidarmi, *",
+        "  mi portino al tuo monte santo e alle tue dimore."
+      ],
+      [
+        "Verrò all’altare di Dio, †",
+        "  al Dio della mia gioia, del mio giubilo. *",
+        "  A te canterò con la cetra, Dio, Dio mio."
+      ],
+      [
+        "Perché ti rattristi, anima mia, *",
+        "  perché su di me gemi?",
+        "Spera in Dio: ancora potrò lodarlo, *",
+        "  lui, salvezza del mio volto e mio Dio."
+      ]
+    ]
+  },
+  "bloccato": false,
+  "fonti": {
+    "lodi": "https://www.chiesacattolica.it/la-liturgia-delle-ore/?data-liturgia=20261124&ora=lodi-mattutine",
+    "messa": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261124"
+  },
+  "aggiornato": "2026-11-17T03:02:39.983Z"
+}
