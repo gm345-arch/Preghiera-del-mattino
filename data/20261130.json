@@ -1,0 +1,59 @@
+{
+  "data": "20261130",
+  "celebrazione": "SANT'ANDREA APOSTOLO – FESTA",
+  "vangelo": {
+    "evangelista": "Matteo",
+    "riferimento": "Mt 4,18-22",
+    "titolo": "Essi subito lasciarono le reti e lo seguirono.",
+    "paragrafi": [
+      "In quel tempo, mentre camminava lungo il mare di Galilea, Gesù vide due fratelli, Simone, chiamato Pietro, e Andrea suo fratello, che gettavano le reti in mare; erano infatti pescatori. E disse loro: «Venite dietro a me, vi farò pescatori di uomini». Ed essi subito lasciarono le reti e lo seguirono.\nAndando oltre, vide altri due fratelli, Giacomo, figlio di Zebedèo, e Giovanni suo fratello, che nella barca, insieme a Zebedèo loro padre, riparavano le loro reti, e li chiamò. Ed essi subito lasciarono la barca e il loro padre e lo seguirono."
+    ]
+  },
+  "antifona": [
+    "Andrea, fratello di Simon Pietro,",
+    "fu tra i primi che seguirono il Signore."
+  ],
+  "salmo": {
+    "numero": "SALMO 62, 2-9",
+    "titolo": "L'anima assetata del Signore",
+    "epigrafe": "La Chiesa ha sete del suo Salvatore, bramando di dissetarsi alla fonte dell’acqua viva che zampilla per la vita eterna (cfr. Cassiodoro).",
+    "strofe": [
+      [
+        "O Dio, tu sei il mio Dio, all’aurora ti cerco, *",
+        "  di te ha sete l’anima mia,",
+        "a te anela la mia carne, *",
+        "  come terra deserta, arida, senz’acqua."
+      ],
+      [
+        "Così nel santuario ti ho cercato, *",
+        "  per contemplare la tua potenza e la tua gloria.",
+        "Poiché la tua grazia vale più della vita, *",
+        "  le mie labbra diranno la tua lode."
+      ],
+      [
+        "Così ti benedirò finché io viva, *",
+        "  nel tuo nome alzerò le mie mani.",
+        "Mi sazierò come a lauto convito, *",
+        "  e con voci di gioia ti loderà la mia bocca."
+      ],
+      [
+        "Nel mio giaciglio di te mi ricordo, *",
+        "  penso a te nelle veglie notturne,",
+        "tu sei stato il mio aiuto; *",
+        "  esulto di gioia all’ombra delle tue ali."
+      ],
+      [
+        "A te si stringe *",
+        "  l’anima mia.",
+        "La forza della tua destra *",
+        "  mi sostiene."
+      ]
+    ]
+  },
+  "bloccato": false,
+  "fonti": {
+    "lodi": "https://www.chiesacattolica.it/la-liturgia-delle-ore/?data-liturgia=20261130&ora=lodi-mattutine",
+    "messa": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261130"
+  },
+  "aggiornato": "2026-11-23T03:12:40.781Z"
+}
